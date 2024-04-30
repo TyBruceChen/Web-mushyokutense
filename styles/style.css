@@ -1,6 +1,7 @@
-#mushyokutense-video{
+#video{
     position: fixed;
     z-index: -100;
     right: 1px;
     top: -1px;
 }
+
