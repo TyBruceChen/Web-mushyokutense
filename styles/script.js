@@ -12,6 +12,7 @@ function videoInit(){
     video.style.display = 'none'
     video.setAttribute('id','mushyokutense-video')
 
+    
     videosrc.src = "static/mushyokutense.mp4"
     videosrc.type = 'video/mp4'
 
@@ -26,10 +27,15 @@ function videoControl(){
     if (video.style.display == 'block'){
         video.style.display = 'none'
         button1.textContent = 'Display background Anime'
+        document.getElementById('videoSource').style.display = 'none'
+        document.getElementsByTagName('main')[0].style.backgroundColor = 'rgba(234, 231, 231,1)'
     }
     else{
         video.style.display = 'block'
         button1.textContent = 'Hind background Anime'
+        document.getElementById('videoSource').style.display = 'block'
+        console.log(document.getElementsByTagName('main')[0].style.backgroundColor)
+        document.getElementsByTagName('main')[0].style.backgroundColor = 'rgba(234, 231, 231,0)'
     }
 
 }
