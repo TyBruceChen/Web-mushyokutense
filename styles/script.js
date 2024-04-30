@@ -38,14 +38,14 @@ function videoVoice(){
     const video = document.getElementById('mushyokutense-video')
     const button2 = document.getElementById('videoVoice')
    if (video.muted == true){
-    //video.muted = false
+    video.muted = false
     button2.textContent = 'Mute background music'
-    console.log(video.muted)
+    //console.log(video.muted)
    }
    else{
-    //video.muted = true
+    video.muted = true
     button2.textContent = 'Unmute background music'
-    console.log(video.muted)
+    //console.log(video.muted)
    }
 }
 
