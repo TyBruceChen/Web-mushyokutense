@@ -3,8 +3,9 @@ function videoInit(){
     var parent = document.getElementById('video')
     var videosrc = document.createElement('source')
 
-    video.autoplay = true
-    video.loop = true
+    video.autoplay = "true"
+    video.loop = "true"
+    video.muted = true  //requirment for chrome66
     video.volume = '0.75'
     video.style.opacity = '0.7'
     video.style.width = '100%'
@@ -15,6 +16,7 @@ function videoInit(){
 
     parent.appendChild(video)
     video.appendChild(videosrc)
+    document.getElementById('mushyokutense-video').play()
 }
 
 function videoControl(){
