@@ -9,7 +9,7 @@ function videoInit(){
     video.volume = '0.75'
     video.style.opacity = '0.7'
     video.style.width = '100%'
-    video.style.display = 'block'
+    video.style.display = 'none'
     video.setAttribute('id','mushyokutense-video')
 
     videosrc.src = "static/mushyokutense.mp4"
@@ -38,12 +38,12 @@ function videoVoice(){
     const video = document.getElementById('mushyokutense-video')
     const button2 = document.getElementById('videoVoice')
    if (video.muted == true){
-    video.muted = false
+    //video.muted = false
     button2.textContent = 'Mute background music'
     console.log(video.muted)
    }
    else{
-    video.muted = true
+    //video.muted = true
     button2.textContent = 'Unmute background music'
     console.log(video.muted)
    }
@@ -53,6 +53,6 @@ document.addEventListener('DOMContentLoaded', function(){
     //load functions
     videoInit()
     console.log(document.getElementById('mushyokutense-video').style.display)
-    document.getElementById('mushyokutense-video').muted = false
+    //document.getElementById('mushyokutense-video').muted = false
 })
 
