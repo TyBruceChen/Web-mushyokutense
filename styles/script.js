@@ -1,9 +1,20 @@
 function videoInit(){
-    const video = document.createElement('p')
-    var parent = document.getElementsByTagName('header')[0]
+    var video = document.createElement('video')
+    var parent = document.getElementById('video')
+    var videosrc = document.createElement('source')
 
-    video.textContent = 'hello'
+    video.autoplay = true
+    video.loop = true
+    video.volume = '0.75'
+    video.style.opacity = '0.7'
+    video.style.width = '100%'
+    video.setAttribute('id','mushyokutense-video')
+
+    videosrc.src = "static/mushyokutense.mp4"
+    videosrc.type = 'video/mp4'
+
     parent.appendChild(video)
+    video.appendChild(videosrc)
 }
 
 function videoControl(){
@@ -36,6 +47,6 @@ function videoVoice(){
 document.addEventListener('DOMContentLoaded', function(){
     //load functions
     videoInit()
+    console.log(document.getElementById('mushyokutense-video').style.display)
 })
 
-console.log(document.getElementById('mushyokutense-video').style.display)
